@@ -65,8 +65,9 @@ Item listExtractElem(Link* lp, Key k){
 		if(prev == NULL){
 			Link next = curr->next;
 			*lp = next;
+			Item val = curr->val;
 			free(curr);
-			return next->val;
+			return val;
 		}
 		prev->next = curr->next;
 		Item val = curr->val;
